@@ -966,7 +966,14 @@ section,
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
-.resume .resume-title {
+.resume .resume-title1 {
+  color: var(--heading-color);
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: -50px;
+  margin-bottom: 30px;
+  color: color-mix(in srgb, var(--default-color), transparent 5%);
+}.resume .resume-title2 {
   color: var(--heading-color);
   font-size: 26px;
   font-weight: 700;
@@ -974,6 +981,12 @@ section,
   margin-bottom: 30px;
   color: color-mix(in srgb, var(--default-color), transparent 5%);
 }
+@media (max-width: 991px) {
+  .resume .resume-title2 {
+    margin-top: 50px !important;
+  }
+}
+
 
 .resume .resume-item {
   padding: 0 0 10px 20px;
