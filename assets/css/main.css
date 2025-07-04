@@ -1019,7 +1019,7 @@ section,
   font-size: 15px;
   font-weight: 600;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 .resume .resume-item p {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -1080,7 +1080,7 @@ section,
 }
 
 .services .service-item .icon i {
-  font-size: 36px;
+  font-size: 40px;
   transition: 0.5s;
   position: relative;
 }
@@ -1099,7 +1099,7 @@ section,
 .services .service-item h3 {
   font-weight: 700;
   margin: 10px 0 15px 0;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .services .service-item p {
@@ -1182,6 +1182,18 @@ section,
 
 .services .service-item.item-pink:hover .icon path {
   fill: #f3268c;
+}
+
+.services .service-item.item-blue i {
+  color: #351fff;
+}
+
+.services .service-item.item-blue:hover .icon i {
+  color: #fff;
+}
+
+.services .service-item.item-blue:hover .icon path {
+  fill: #351fff;
 }
 
 /*--------------------------------------------------------------
