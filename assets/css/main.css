@@ -142,6 +142,7 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
+
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -188,7 +189,7 @@ h6 {
   line-height: 0px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .header .logo {
     order: 1;
   }
@@ -206,7 +207,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-@media (min-width: 1200px) {
+@media (min-width: 1199px) {
   .navmenu {
     padding: 0;
   }
@@ -699,7 +700,7 @@ section,
   justify-content: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .hero {
     min-height: calc(100vh - 68px);
   }
@@ -987,7 +988,6 @@ section,
   }
 }
 
-
 .resume .resume-item {
   padding: 0 0 10px 20px;
   margin-top: -2px;
@@ -1031,6 +1031,14 @@ section,
   margin-bottom: 2px;
 }
 
+.resume .resume-h5-2{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 18px;
+  font-size: 15px;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin-top: -10px;
+}
 .resume .resume-item ul {
   padding-left: 20px;
 }
@@ -1060,7 +1068,7 @@ section,
 --------------------------------------------------------------*/
 .services .service-item {
   background-color: var(--surface-color);
-  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.07);
   height: 100%;
   padding: 10px 10px;
   text-align: center;
@@ -1196,6 +1204,17 @@ section,
   fill: #351fff;
 }
 
+.services .service-item.item-brown i {
+  color: #4b3328;
+}
+
+.services .service-item.item-brown:hover .icon i {
+  color: #fff;
+}
+
+.services .service-item.item-brown:hover .icon path {
+  fill: #4b3328;
+}
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
@@ -1465,4 +1484,95 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+
+/*--------------------------------------------------------------
+# Custom Section
+--------------------------------------------------------------*/
+.scroll-link {
+  background-color: var(--surface-color);
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  padding: 5px 5px;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.scroll-link h3 {
+  display: inline-block;
+  color: #444;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.scroll-link h3:hover {
+  color: #ad9576;
+  /* text-decoration: underline; */
+  cursor: pointer;
+}
+
+.project .project-item {
+  background-color: var(--surface-color);
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  padding: 10px 10px;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.project .project-item .icon {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.3s;
+  position: relative;
+}
+
+.project .project-item .icon i {
+  font-size: 40px;
+  transition: 0.5s;
+  position: relative;
+}
+
+.project .project-item .icon svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.project .project-item .icon svg path {
+  transition: 0.5s;
+  fill: color-mix(in srgb, var(--default-color), transparent 95%);
+}
+
+.project .project-item h3 {
+  font-weight: 700;
+  margin: 10px 0 15px 0;
+  font-size: 18px;
+}
+
+.project .project-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.project .project-item:hover {
+  box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.1);
+}
+
+.project .project-item.item-brown i {
+  color: #4b3328;
+}
+
+.project .project-item.item-brown:hover .icon i {
+  color: #fff;
+}
+
+.project .project-item.item-brown:hover .icon path {
+  fill: #4b3328;
 }
