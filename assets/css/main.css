@@ -1510,3 +1510,32 @@ section,
   /* text-decoration: underline; */
   cursor: pointer;
 }
+
+.project-gitlink {
+  background-color: var(--surface-color);
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  padding: 5px 5px;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 5px;
+} 
+.project-gitlink span {
+  font-size: 16px !important;
+  display: inline-block;
+  color: #444;
+  transition: color 0.3s;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 12px;
+  text-decoration: none;
+  border: none;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.project-gitlink span:hover {
+  color: #ad9576;
+  /* text-decoration: underline; */
+  cursor: pointer;
+}
