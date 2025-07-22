@@ -1275,7 +1275,9 @@ section,
   overflow: hidden;
   padding: 10px;
   transition: transform 0.3s ease; */
-  border: 1px solid red;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-top: var(--bs-gutter-y);
 }
 .portfolio .portfolio-item img {
   transition: 0.3s;
@@ -1313,6 +1315,7 @@ section,
   color: #ffffff;
   display: inline-block;
   background-color: var(--accent-color);
+  border-radius: 5em;
   /* font-size: 18px;
   font-weight: 600;
   padding-right: 50px; */
@@ -1325,9 +1328,10 @@ section,
   display: inline-block;
   left: 0;
   right: 0;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   /* color: color-mix(in srgb, var(--default-color), transparent 30%);
   font-size: 14px;
   margin-bottom: 0;
@@ -1589,7 +1593,7 @@ section,
   font-size: 12px;
   text-decoration: none;
   border: none;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: var(--nav-font);
 }
 
 .project-gitlink span:hover {
@@ -1606,3 +1610,5 @@ section,
   display: block;
   border-radius: 8px;        
 }
+
+
