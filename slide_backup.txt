@@ -1,0 +1,70 @@
+<!--
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>TMI</h2>
+        <p>"Too Much Information"</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/tmi-img/tmi1.png" class="testimonial-img" alt="">
+                <h3>깃허브 닉네임이 왜 '나이어리' 인가요?</h3>
+                <!-- <h4>Ceo &amp; Founder</h4> -->
+                <!-- <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div> -->
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>어릴 적, 처음으로 제 명의의 게임 계정이 생기던 날에 아버지가 지어 주신 닉네임입니다. <br>무슨 뜻인지는 아버지도 모른다고 하십니다.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/tmi-img/tmi2.jpg" class="testimonial-img" alt="">
+                <h3>좋아하는 음식이 뭐예요?</h3>
+                <!-- <h4>Ceo &amp; Founder</h4> -->
+                <!-- <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div> -->
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>쫄면 사랑합니다.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+          </div>
+          <div class="swiper-pagination">
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+슬라이드 쓸 일 있으면 쓰려고...
