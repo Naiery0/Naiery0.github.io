@@ -12,28 +12,34 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- ===== Fonts: preconnect & 핵심 폰트 (Roboto 하나만, display=swap) ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- 아이콘 폰트(로컬 woff2)가 있으면 우선 로드 -->
+  <link rel="preload" href="assets/vendor/bootstrap-icons/bootstrap-icons.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- 히어로 이미지가 크면 preload(옵션) -->
+  <link rel="preload" as="image" href="assets/img/index-bg-down.webp">
+
+  <!-- ===== 주요 CSS (즉시 필요한 것만) ===== -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- ===== 비핵심/플러그인 CSS: media=print 트릭으로 비동기 로드 ===== -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+
   <!-- =======================================================
-  * Template Name: Kelly
-  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    * Template Name: Kelly (optimized)
+    ======================================================== -->
+  <style>
+    /* 안전한 폰트 폴백 및 스무딩 */
+    :root { --base-font: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
+    html, body { font-family: var(--base-font); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+  </style>
 </head>
 
 <body class="index-page">
@@ -42,8 +48,6 @@
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0" style="margin-left: 35px;">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Kim Juntae</h1>
       </a>
 
@@ -51,36 +55,13 @@
         <ul>
           <li><a href="index.html" class="active">홈</a></li>
           <li><a href="about2.html">프로필</a></li>
-          <!-- <li><a href="resume.html">학업</a></li> -->
-          <!-- <li><a href="services.html">기술</a></li> -->
           <li><a href="portfolio.html">프로젝트</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
-          <!-- <li><a href="contact.html">Contact</a></li> -->
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
       <div class="header-social-links col-md-8">
-        <!-- <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
-        <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
+        <!-- social links -->
       </div>
 
     </div>
@@ -90,15 +71,22 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
-
-      <img src="assets/img/index-bg-down.png" alt="" data-aos="fade-in">
+      <!-- WebP 우선, PNG fallback -->
+      <picture>
+        <source srcset="assets/img/index-bg-down.webp" type="image/webp">
+        <img src="assets/img/index-bg-down.png"
+             alt=""
+             width="1600" height="800"
+             loading="eager"
+             decoding="async"
+             data-aos="fade-in">
+      </picture>
 
       <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <h3 class="dev-title">Kim Juntae Home</h3>
             <div></div>
-            <!-- <p>I'm a professional illustrator from San Francisco</p> -->
             <a href="about2.html" class="btn-get-started">profile</a>
           </div>
         </div>
@@ -109,26 +97,14 @@
   </main>
 
   <footer id="footer" class="footer light-background">
-
     <div class="container">
       <div class="copyright text-center ">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">Kelly</strong> <span>All Rights Reserved<br></span></p>
       </div>
-      <!-- <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-      </div> -->
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com/">ThemeWagon</a>
       </div>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
@@ -137,19 +113,38 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <!-- ===== Vendor JS Files (defer로 로드하여 렌더 차단 최소화) ===== -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/vendor/php-email-form/validate.js" defer></script>
+  <script src="assets/vendor/aos/aos.js" defer></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js" defer></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <!-- Main JS File (defer) -->
+  <script src="assets/js/main.js" defer></script>
+
+  <!-- Preloader 숨김: DOMContentLoaded 시 빠르게 제거 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const pre = document.getElementById('preloader');
+      if (!pre) return;
+      // 다음 paint 이후에 서서히 사라지게 처리
+      requestAnimationFrame(() => {
+        pre.style.transition = 'opacity 250ms ease';
+        pre.style.opacity = '0';
+        pre.style.pointerEvents = 'none';
+        setTimeout(() => { pre.style.display = 'none'; }, 300);
+      });
+      // AOS 초기화 (AOS 사용 시)
+      if (window.AOS && typeof AOS.init === 'function') {
+        AOS.init();
+      }
+    });
+  </script>
 
 </body>
 
